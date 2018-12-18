@@ -19,7 +19,9 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="{{ "/js/freelancer.js" }}"></script>
-
+    {% if jekyll.environment == "production" %}
+    <script src="{{ "/js/custom.js" }}"></script>
+    {% endif %}
     {% if site.contact == "disqus" %}
     <!-- Disqus Stuff -->
     {% include js_disqus.html %}
